@@ -16,7 +16,7 @@ pipeline {
     stages {
         stage('Get Code') {
             steps {
-                scm checkout
+                checkout scm
             }
         }
  
