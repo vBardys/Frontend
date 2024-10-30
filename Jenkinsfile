@@ -16,6 +16,7 @@ pipeline {
     stages {
         stage('Get Code') {
             steps {
+                //git branch: 'jenkinsfile', url: 'https://github.com/vBardys/Frontend.git'
                 checkout scm
             }
         }
