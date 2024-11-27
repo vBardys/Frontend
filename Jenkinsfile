@@ -64,7 +64,7 @@ pipeline {
             cleanWs()
         }
         success{
-            build wait: false, propagate: false, job: 'app_of_apps', parameters: [string(name: 'backendDockerTag', value: 'latest'), string(name: 'frontendDockerTag', value: "$dockerTag")]
+            build wait: false, propagate: false, job: 'app_of_apps', parameters: [string(name: 'backendDockerTag', value: "$dockerTag"), string(name: 'frontendDockerTag', value: 'latest')]
         }
     }
 }
